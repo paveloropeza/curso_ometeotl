@@ -1,7 +1,7 @@
 
  &time_control
  run_days                            = 0,
- run_hours                           = 3,
+ run_hours                           = 1,
  run_minutes                         = 0,
  run_seconds                         = 0,
  start_year                          = 2022, 2022, 
