@@ -4,7 +4,7 @@ import cartopy.crs as ccrs
 import cartopy.feature as cfeature
 from cartopy.feature import NaturalEarthFeature
 
-def plot_wrf_domains_single_map(geo_em_files, output_file='wrf_domains.png', dpi=300):
+def plot_wrf_domains_single_map(geo_em_files, output_file='wrf_dominios.png', dpi=300):
     """
     
     Grafica los dominios WRF en un solo mapa y los guarda en un archivo PNG
@@ -84,7 +84,7 @@ def plot_wrf_domains_single_map(geo_em_files, output_file='wrf_domains.png', dpi
     # Add legend
     ax.legend(loc='upper right', framealpha=1)
     
-    plt.title('Dominios del WRF-CAMe ')
+    #plt.title('Dominios del WRF')
     
     # Save figure with high resolution
     plt.savefig(output_file, dpi=dpi, bbox_inches='tight')
@@ -94,16 +94,16 @@ def plot_wrf_domains_single_map(geo_em_files, output_file='wrf_domains.png', dpi
 
 # Example usage
 if __name__ == "__main__":
-    # List your geo_em files in order from outer to inner domains
+   
     geo_em_files = [
-        'geo_em.d01.nc',
-        'geo_em.d02.nc',
+        '/LUSTRE/cursos/2025/semestre2/seminarioiv/p.8510/WRFV4/WPS/geo_em.d01.nc',
+        '/LUSTRE/cursos/2025/semestre2/seminarioiv/p.8510/WRFV4/WPS/geo_em.d02.nc',
         #'geo_em.d03.nc'
     ]
     
     # Save the map with custom filename and resolution
     plot_wrf_domains_single_map(
         geo_em_files,
-        output_file='wrf_domains_con_estados.png',
+        output_file='wrf_dominios_con_estados.png',
         dpi=300
     )

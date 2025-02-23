@@ -91,7 +91,7 @@ if __name__ == "__main__":
     lat_bounds = [19.3, 19.75]
     
     # Input and output files
-    wrf_file = "wrfout_d02_2022-06-12_00.nc"  # Replace with your file path
+    wrf_file = "/LUSTRE/cursos/2025/semestre2/seminarioiv/p.8510/WRFV4/WRF/wrfout_d02_2022-06-12_00.nc"  # Replace with your file path
     output_file = "precipitation_timeseries.png"
     
     # Extract data and create plot

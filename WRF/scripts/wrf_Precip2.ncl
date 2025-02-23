@@ -12,7 +12,7 @@ begin
 ; The WRF ARW input file.  
 ; This needs to have a ".nc" appended, so just do it.
 ;  a = addfile("../wrfout_d01_2000-01-24_12:00:00.nc","r")
-  a = addfile("wrfout_d02_2022-06-12_00.nc","r")
+  a = addfile("/LUSTRE/cursos/2025/semestre2/seminarioiv/p.8510/WRFV4/WRF/wrfout_d01_2022-06-12_00.nc","r")
 
 
 ; We generate plots, but what kind do we prefer?
@@ -20,12 +20,12 @@ begin
  type = "pdf"
 ; type = "ps"
 ; type = "ncgm"
-  wks = gsn_open_wks(type,"plt_Precip2")
+  wks = gsn_open_wks(type,"grafica_Precipitaciones")
 
 
 ; Set some basic resources
   res = True
-  res@MainTitle = "REAL-TIME WRF"
+  res@MainTitle = "Precipitacion para Dominio 1 - WRF"
 
   pltres = True
   mpres = True
@@ -60,7 +60,7 @@ begin
   do it = 2,ntimes-1,2             ; TIME LOOP - start at hour 6 as we are only interested in 6hourly tendencies
 
     print("Working on time: " + times(it) )
-    res@TimeLabel = times(it)   ; Set Valid time to use on plots
+    ;res@TimeLabel = times(it)   ; Set Valid time to use on plots
 
 
     rain_exp_tend = rain_exp(it,:,:) - rain_exp(it-2,:,:)
