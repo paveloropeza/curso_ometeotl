@@ -7,19 +7,20 @@
 
 
 # enter the namelist values of e_we and e_sn
-#e_we = 200 
-#e_sn = 250
-e_we = 76
-e_sn = 79
+e_we = 339 
+e_sn = 263
+#e_we = 76
+#e_sn = 79
  
 # number of cores you want to use per node (Cheyenne has a max of 36/node)
-cores = 52
+#cores = 52
+cores = 92
 
 # The value for 'cores' gets incremented later, so we want a static variable for the original value 
 cores_orig = cores
 
 # set upper limit of nodes - the max you want to loop through
-node_max = 3
+node_max = 1
 
 # This is the least number of grid points allowed for each processor. 
 # Dont' change this value.
